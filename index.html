@@ -4,127 +4,133 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mahdi Mashayekhi | Computer Vision Engineer</title>
-<meta name="description" content="Portfolio of Mahdi Mashayekhi, a junior computer vision engineer working on object detection, real-time image processing and deep learning.">
+<meta name="description" content="Portfolio of Mahdi Mashayekhi, a junior computer vision engineer building object detection and real-time image processing systems.">
 <meta property="og:title" content="Mahdi Mashayekhi | Computer Vision Engineer">
-<meta property="og:description" content="Object detection, real-time image processing and deep learning projects.">
+<meta property="og:description" content="License plate recognition, vehicle speed estimation and deep learning projects.">
 <meta name="theme-color" content="#0b1620">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0b1620; --bg2:#101f2c; --card:#12222f; --line:#223647;
-  --text:#c9d6df; --muted:#8aa0b0; --white:#f3f8fb;
-  --box:#19d3a2; --box-d:#0a8f6c;
-}
+:root{--bg:#0b1620;--bg2:#101f2c;--card:#12222f;--line:#223647;--text:#c9d6df;--muted:#8aa0b0;--white:#f3f8fb;--box:#19d3a2}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:17px}
 h1,h2,h3{font-family:Sora,"Source Sans 3",system-ui,sans-serif;color:var(--white);line-height:1.2}
 a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--box);outline-offset:3px}
+a:focus-visible{outline:2px solid var(--box);outline-offset:3px}
+.i{width:1.15em;height:1.15em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.2em}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-
-/* nav */
 nav{position:sticky;top:0;z-index:10;background:rgba(11,22,32,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
-.logo{font:700 18px Sora,sans-serif;color:var(--white);text-decoration:none;letter-spacing:.02em}
+.logo{font:700 18px Sora,sans-serif;color:var(--white);text-decoration:none}
 .logo span{color:var(--box)}
 nav ul{display:flex;gap:22px;list-style:none;font-size:15px}
 nav ul a{text-decoration:none;color:var(--muted)}
 nav ul a:hover{color:var(--white)}
-
-/* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-#scene{position:absolute;inset:0;width:100%;height:100%;opacity:.95}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 8%,rgba(11,22,32,.55) 60%,rgba(11,22,32,.2));}
-.hero .wrap{position:relative;z-index:2;padding-top:110px;padding-bottom:120px}
+#scene{position:absolute;inset:0;width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 8%,rgba(11,22,32,.55) 60%,rgba(11,22,32,.2))}
+.hero .wrap{position:relative;z-index:2;padding-top:110px;padding-bottom:110px}
 .hello{color:var(--box);font-weight:600;margin-bottom:14px}
-.hero h1{font-size:clamp(38px,7vw,68px);font-weight:700;letter-spacing:-.02em}
-.hero h2{font-size:clamp(18px,2.6vw,24px);font-weight:600;color:var(--box);margin:16px 0 18px}
-.hero p.lead{max-width:52ch;font-size:19px;color:var(--text)}
+.hero h1{font-size:clamp(38px,7vw,68px);letter-spacing:-.02em}
+.hero h2{font-size:clamp(18px,2.6vw,24px);color:var(--box);margin:16px 0 18px}
+.lead{max-width:54ch;font-size:19px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.btn{display:inline-block;padding:12px 22px;font:600 15px Sora,sans-serif;text-decoration:none;border:2px solid var(--box);transition:background .2s,color .2s}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;font:600 15px Sora,sans-serif;text-decoration:none;border:2px solid var(--box);transition:background .2s}
 .btn.fill{background:var(--box);color:#06231b}
 .btn.fill:hover{background:#4be8c0}
 .btn.line{color:var(--white)}
 .btn.line:hover{background:rgba(25,211,162,.14)}
-
-/* sections */
+.socials{display:flex;gap:10px;margin-top:26px}
+.socials a{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--line);color:var(--white);background:rgba(11,22,32,.6);font-size:19px;transition:.2s}
+.socials a:hover{border-color:var(--box);color:var(--box)}
 section{padding:84px 0}
 section.alt{background:var(--bg2);border-block:1px solid var(--line)}
 .title{display:flex;align-items:center;gap:16px;margin-bottom:38px}
 .title h2{font-size:30px}
 .title::before{content:"";width:14px;height:34px;border-left:4px solid var(--box);border-top:4px solid var(--box)}
 .title::after{content:"";flex:1;height:1px;background:var(--line)}
-
-/* about */
-.about{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start}
+.about{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start}
+.photo{position:relative;width:260px;height:300px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .fallback{position:absolute;font:700 48px Sora,sans-serif;color:var(--white);z-index:0}
+.photo img{position:relative;z-index:1}
+.photo::before,.photo::after,.photo i::before,.photo i::after{content:"";position:absolute;width:30px;height:30px;border:3px solid var(--box);z-index:2}
+.photo::before{top:-8px;left:-8px;border-right:0;border-bottom:0}
+.photo::after{top:-8px;right:-8px;border-left:0;border-bottom:0}
+.photo i::before{bottom:-8px;left:-8px;border-right:0;border-top:0}
+.photo i::after{bottom:-8px;right:-8px;border-left:0;border-top:0}
+.photo em{position:absolute;left:-8px;bottom:-34px;z-index:2;background:var(--box);color:#06231b;font:600 12px Sora,sans-serif;padding:5px 9px;font-style:normal}
 .about p + p{margin-top:16px}
-.facts{display:grid;gap:14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:28px}
 .fact{border:1px solid var(--line);background:var(--card);padding:16px 18px;border-left:4px solid var(--box)}
-.fact b{display:block;font:700 26px Sora,sans-serif;color:var(--white)}
-.fact span{font-size:15px;color:var(--muted)}
-
-/* skills */
+.fact b{display:flex;align-items:center;gap:8px;font:700 20px Sora,sans-serif;color:var(--white)}
+.fact b .i{color:var(--box)}
+.fact span{font-size:14.5px;color:var(--muted)}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
 .skill{background:var(--card);border:1px solid var(--line);padding:22px}
-.skill h3{font-size:16px;margin-bottom:14px;color:var(--box)}
+.skill h3{display:flex;align-items:center;gap:10px;font-size:16px;margin-bottom:14px;color:var(--box)}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags span{font-size:14px;padding:5px 10px;border:1px solid var(--line);color:var(--white);background:rgba(255,255,255,.03)}
-
-/* projects */
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
-.proj{position:relative;background:var(--card);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px}
+.proj{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .2s,transform .2s;overflow:hidden}
 .proj:hover{border-color:var(--box);transform:translateY(-3px)}
-.proj::before{content:"";position:absolute;top:-1px;left:-1px;width:26px;height:26px;border-top:3px solid var(--box);border-left:3px solid var(--box)}
-.proj h3{font-size:21px;margin-bottom:12px}
-.proj p{color:var(--text);flex:1}
-.proj .tags{margin:18px 0 20px}
-.proj a.go{font:600 15px Sora,sans-serif;color:var(--box);text-decoration:none}
-.proj a.go:hover{text-decoration:underline}
-.proj .soon{font-size:14px;color:var(--muted)}
-
-/* timeline */
+.proj svg.pic{display:block;width:100%;height:auto;border-bottom:1px solid var(--line)}
+.proj .body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.proj h3{font-size:21px;margin-bottom:10px}
+.proj p{flex:1}
+.proj .tags{margin:16px 0 18px}
+.go{display:inline-flex;align-items:center;gap:8px;font:600 15px Sora,sans-serif;color:var(--box);text-decoration:none}
+.go:hover{text-decoration:underline}
 .tl{border-left:2px solid var(--line);margin-left:6px}
 .step{position:relative;padding:0 0 34px 30px}
 .step:last-child{padding-bottom:0}
 .step::before{content:"";position:absolute;left:-9px;top:6px;width:16px;height:16px;background:var(--bg2);border:3px solid var(--box)}
-.step .when{font-size:14px;color:var(--box);font-weight:600}
+.when{font-size:14px;color:var(--box);font-weight:600}
 .step h3{font-size:19px;margin:4px 0}
-.step .org{color:var(--muted);font-size:15px;margin-bottom:8px}
+.org{color:var(--muted);font-size:15px;margin-bottom:8px}
 .step ul{margin-left:18px;display:grid;gap:5px}
 .step li::marker{color:var(--box)}
-
-/* award */
-.award{display:flex;gap:28px;align-items:center;border:2px solid var(--box);padding:28px 32px;background:var(--card)}
-.award .n{font:700 64px/1 Sora,sans-serif;color:var(--box);white-space:nowrap}
-.award .n small{display:block;font:600 12px Sora,sans-serif;color:var(--muted);margin-bottom:8px}
-.award h3{font-size:20px;margin-bottom:6px}
-.award p{color:var(--muted);font-size:15px}
-
-/* contact */
 .contact{text-align:center}
 .contact h2{font-size:clamp(28px,5vw,42px);margin-bottom:14px}
 .contact p{max-width:52ch;margin:0 auto 30px}
-.links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
-.links a{font-size:15px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
-.links a:hover{color:var(--box);border-color:var(--box)}
-footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-
+.contact .cta{justify-content:center;margin-top:0}
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:44px 0 30px;text-align:center}
+footer .tagline{font:600 18px Sora,sans-serif;color:var(--white)}
+footer .tagline span{color:var(--box)}
+footer .socials{justify-content:center}
+footer small{display:block;margin-top:24px;color:var(--muted);font-size:14px}
+footer a.top{color:var(--box);text-decoration:none;font-weight:600}
 @media (max-width:760px){
   nav ul{gap:14px;font-size:14px}
   nav ul li:nth-child(n+5){display:none}
-  .about{grid-template-columns:1fr;gap:30px}
-  .award{flex-direction:column;align-items:flex-start;gap:14px}
+  .about{grid-template-columns:1fr;gap:50px}
+  .photo{margin:0 auto}
   .hero::after{background:linear-gradient(180deg,rgba(11,22,32,.4),var(--bg) 85%)}
-  .hero .wrap{padding-top:80px;padding-bottom:90px}
+  .hero .wrap{padding-top:80px;padding-bottom:80px}
   section{padding:64px 0}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.proj{transition:none}}
 </style>
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></symbol>
+  <symbol id="i-kaggle" viewBox="0 0 24 24"><path d="M7 4v16M18 4l-9 9 9 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7zM2 17l10 5 10-5M2 12l10 5 10-5"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.7-4 3-9 3s-9-1.3-9-3M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/><circle cx="9" cy="7" r="4"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4a2 2 0 0 1-2-2V5h4M18 9h2a2 2 0 0 0 2-2V5h-4M6 4h12v6a6 6 0 0 1-12 0zM12 16v4M8 22h8"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></symbol>
+</svg>
 
 <nav>
   <div class="wrap">
@@ -145,11 +151,16 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border
     <p class="hello">Hi, I'm</p>
     <h1>Mahdi Mashayekhi</h1>
     <h2>Junior Computer Vision Engineer</h2>
-    <p class="lead">I teach machines to see. I build object detection and real-time image processing systems, from annotating the data to training the models that read plates and measure vehicle speed.</p>
+    <p class="lead">I teach machines to see. I build object detection and real-time image processing systems, from annotating the data to training models that read license plates and measure vehicle speed.</p>
     <div class="cta">
-      <a class="btn fill" href="#projects">View my projects</a>
-      <a class="btn line" href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn line" href="#contact">Get in touch</a>
+      <a class="btn fill" href="assets/Mahdi-Mashayekhi-Resume.pdf" download><svg class="i"><use href="#i-down"/></svg>Download resume</a>
+      <a class="btn line" href="#projects"><svg class="i"><use href="#i-eye"/></svg>View projects</a>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#i-github"/></svg></a>
+      <a href="https://www.linkedin.com/in/mahdimashayekhi/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin"/></svg></a>
+      <a href="https://www.kaggle.com/mahdimashayekhi" target="_blank" rel="noopener" aria-label="Kaggle"><svg class="i"><use href="#i-kaggle"/></svg></a>
+      <a href="mailto:mahdimashayekhi.a@gmail.com" aria-label="Email"><svg class="i"><use href="#i-mail"/></svg></a>
     </div>
   </div>
 </header>
@@ -159,15 +170,20 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border
   <div class="wrap">
     <div class="title"><h2>About me</h2></div>
     <div class="about">
-      <div>
-        <p>I'm a Computer Engineering student in Tehran who got hooked on computer vision. I like problems where a camera feed turns into useful information: a license plate read correctly, a vehicle tracked across a highway, a model that still works when the lighting changes.</p>
-        <p>My work covers the full pipeline: collecting and annotating data, choosing and training deep learning models, and making them run fast enough for real-time use. I rely on transfer learning to get strong results from small datasets, and I enjoy working in a team where ideas get tested quickly.</p>
-        <p>I'm currently working remotely in computer vision and looking for opportunities to grow as an engineer on real products.</p>
+      <div class="photo">
+        <span class="fallback">M|M</span>
+        <img src="assets/profile.jpg" alt="Portrait of Mahdi Mashayekhi" onerror="this.remove()">
+        <i></i><em>engineer 0.99</em>
       </div>
-      <div class="facts">
-        <div class="fact"><b>Rank 68</b><span>Nationwide, Associate Degree Entrance Exam (Computer major), 2024</span></div>
-        <div class="fact"><b>B2 English</b><span>Comfortable working in international, remote teams</span></div>
-        <div class="fact"><b>Remote</b><span>Computer vision work since August 2025</span></div>
+      <div>
+        <p>I'm a Computer Engineering student from Tehran who got hooked on computer vision. I love problems where a camera feed turns into useful information: a license plate read correctly, a vehicle tracked along a highway, a model that keeps working when the light changes.</p>
+        <p>My work covers the whole pipeline: collecting and annotating data, training deep learning models, and making them fast enough for real-time use. I rely on transfer learning to get strong results from small datasets, and I enjoy teams that test ideas quickly and learn from every result.</p>
+        <p>Right now I'm working remotely in computer vision and looking for a place to grow as an engineer on real products.</p>
+        <div class="facts">
+          <div class="fact"><b><svg class="i"><use href="#i-trophy"/></svg>Rank 68</b><span>Nationwide, Associate Degree Entrance Exam, 2024</span></div>
+          <div class="fact"><b><svg class="i"><use href="#i-globe"/></svg>B2 English</b><span>Ready for international teams</span></div>
+          <div class="fact"><b><svg class="i"><use href="#i-laptop"/></svg>Remote</b><span>Computer vision work since 08/2025</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -177,13 +193,13 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border
   <div class="wrap">
     <div class="title"><h2>Skills</h2></div>
     <div class="skills">
-      <div class="skill"><h3>Computer vision</h3>
+      <div class="skill"><h3><svg class="i"><use href="#i-eye"/></svg>Computer vision</h3>
         <div class="tags"><span>Object detection</span><span>Real-time image processing</span><span>Image processing techniques</span><span>Computer vision libraries</span></div></div>
-      <div class="skill"><h3>Deep learning</h3>
+      <div class="skill"><h3><svg class="i"><use href="#i-layers"/></svg>Deep learning</h3>
         <div class="tags"><span>CNNs</span><span>RNNs</span><span>Transfer learning</span><span>Deep learning algorithms</span></div></div>
-      <div class="skill"><h3>Data</h3>
+      <div class="skill"><h3><svg class="i"><use href="#i-db"/></svg>Data</h3>
         <div class="tags"><span>Data annotation tools</span><span>Dataset preparation</span></div></div>
-      <div class="skill"><h3>How I work</h3>
+      <div class="skill"><h3><svg class="i"><use href="#i-users"/></svg>How I work</h3>
         <div class="tags"><span>Teamwork and collaboration</span><span>Problem-solving</span><span>Positive attitude</span></div></div>
     </div>
   </div>
@@ -193,18 +209,55 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border
   <div class="wrap">
     <div class="title"><h2>Projects</h2></div>
     <div class="projects">
+
       <article class="proj">
-        <h3>Automatic Number Plate Recognition</h3>
-        <p>A system that finds vehicles and license plates in images and video, then reads the plate text. It shows how detection and text recognition work together in a real-time pipeline.</p>
-        <div class="tags"><span>Object detection</span><span>OCR</span><span>Real-time</span></div>
-        <a class="go" href="https://github.com/MahdiMashayekhi-AI/Automatic-Number-Plate-Recognition" target="_blank" rel="noopener">View on GitHub</a>
+        <svg class="pic" viewBox="0 0 640 320" role="img" aria-label="Illustration of a car with a detected license plate">
+          <rect width="640" height="320" fill="#0d1d29"/>
+          <g stroke="#ffffff" stroke-opacity=".05"><path d="M0 80h640M0 160h640M0 240h640M160 0v320M320 0v320M480 0v320"/></g>
+          <path d="M120 215c0-30 18-52 52-60l60-38c14-9 30-13 48-13h110c24 0 42 6 58 20l42 32c26 4 40 22 40 52v26H120z" fill="#1c3345"/>
+          <path d="M255 132h170c14 0 24 4 33 12l28 24H215l24-28c4-5 9-8 16-8z" fill="#19d3a2" fill-opacity=".18"/>
+          <circle cx="215" cy="248" r="30" fill="#0b1620" stroke="#2c4a60" stroke-width="6"/><circle cx="465" cy="248" r="30" fill="#0b1620" stroke="#2c4a60" stroke-width="6"/>
+          <rect x="262" y="218" width="116" height="34" rx="4" fill="#f3f8fb"/>
+          <text x="320" y="242" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="19" fill="#10202b">AB 1234</text>
+          <g fill="none" stroke="#19d3a2" stroke-width="4"><path d="M246 212v-12h12M394 212v-12h-12M246 258v12h12M394 258v12h-12" transform="translate(-4 0)"/></g>
+          <rect x="242" y="196" width="148" height="80" fill="none" stroke="#19d3a2" stroke-width="3"/>
+          <rect x="242" y="172" width="104" height="24" fill="#19d3a2"/><text x="252" y="189" font-family="Sora,sans-serif" font-weight="600" font-size="13" fill="#06231b">plate 0.98</text>
+          <rect x="100" y="100" width="460" height="190" fill="none" stroke="#19d3a2" stroke-opacity=".5" stroke-width="2" stroke-dasharray="8 8"/>
+          <rect x="100" y="76" width="90" height="24" fill="#19d3a2" fill-opacity=".5"/><text x="110" y="93" font-family="Sora,sans-serif" font-weight="600" font-size="13" fill="#06231b">car 0.96</text>
+        </svg>
+        <div class="body">
+          <h3>Automatic Number Plate Recognition</h3>
+          <p>A pipeline that finds vehicles and license plates in images and video, then reads the plate text. It shows how detection and text recognition work together in real time.</p>
+          <div class="tags"><span>Object detection</span><span>OCR</span><span>Real-time</span></div>
+          <a class="go" href="https://github.com/MahdiMashayekhi-AI/Automatic-Number-Plate-Recognition" target="_blank" rel="noopener"><svg class="i"><use href="#i-github"/></svg>View on GitHub<svg class="i"><use href="#i-out"/></svg></a>
+        </div>
       </article>
+
       <article class="proj">
-        <h3>Highway Vehicle Speed Estimation</h3>
-        <p>Detects and tracks vehicles on a highway and estimates how fast each one is moving, turning plain video into traffic measurements.</p>
-        <div class="tags"><span>Object detection</span><span>Tracking</span><span>Video analysis</span></div>
-        <a class="go" href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener">More on GitHub</a>
+        <svg class="pic" viewBox="0 0 640 320" role="img" aria-label="Illustration of vehicles on a highway with speed labels">
+          <rect width="640" height="320" fill="#0d1d29"/>
+          <path d="M0 40h640M0 280h640" stroke="#ffffff" stroke-opacity=".18" stroke-width="3"/>
+          <path d="M0 120h640M0 200h640" stroke="#ffffff" stroke-opacity=".25" stroke-width="3" stroke-dasharray="26 22"/>
+          <path d="M330 40 300 280" stroke="#19d3a2" stroke-opacity=".45" stroke-dasharray="6 6"/>
+          <g fill="#1c3345"><rect x="70" y="62" width="104" height="44" rx="8"/><rect x="330" y="142" width="118" height="44" rx="8"/><rect x="170" y="222" width="130" height="46" rx="8"/><rect x="500" y="62" width="96" height="44" rx="8"/></g>
+          <g fill="#19d3a2" fill-opacity=".2"><rect x="94" y="68" width="40" height="14"/><rect x="356" y="148" width="46" height="14"/><rect x="196" y="228" width="50" height="14"/><rect x="520" y="68" width="38" height="14"/></g>
+          <g fill="none" stroke="#19d3a2" stroke-width="3"><rect x="62" y="54" width="120" height="60"/><rect x="322" y="134" width="134" height="60"/><rect x="162" y="214" width="146" height="62"/><rect x="492" y="54" width="112" height="60"/></g>
+          <g font-family="Sora,sans-serif" font-weight="600" font-size="13" fill="#06231b">
+            <rect x="62" y="30" width="108" height="24" fill="#19d3a2"/><text x="70" y="47">87 km/h</text>
+            <rect x="322" y="110" width="108" height="24" fill="#19d3a2"/><text x="330" y="127">102 km/h</text>
+            <rect x="162" y="190" width="100" height="24" fill="#19d3a2"/><text x="170" y="207">74 km/h</text>
+            <rect x="492" y="30" width="100" height="24" fill="#19d3a2"/><text x="500" y="47">91 km/h</text>
+          </g>
+          <g fill="#19d3a2" fill-opacity=".6"><path d="M40 84h20l-6-6m6 6-6 6M200 164h20l-6-6m6 6-6 6"/></g>
+        </svg>
+        <div class="body">
+          <h3>Highway Vehicle Speed Estimation</h3>
+          <p>Detects and tracks vehicles on a highway and estimates how fast each one is moving, turning ordinary video into traffic measurements.</p>
+          <div class="tags"><span>Object detection</span><span>Tracking</span><span>Video analysis</span></div>
+          <a class="go" href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener"><svg class="i"><use href="#i-github"/></svg>More on GitHub<svg class="i"><use href="#i-out"/></svg></a>
+        </div>
       </article>
+
     </div>
   </div>
 </section>
@@ -224,54 +277,51 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border
 <section id="contact">
   <div class="wrap contact">
     <h2>Let's build something that sees</h2>
-    <p>I'm open to junior computer vision roles, internships and collaborations. Send me a message and I'll get back to you.</p>
-    <a class="btn fill" href="mailto:mahdimashayekhi.a@gmail.com">mahdimashayekhi.a@gmail.com</a>
-    <div class="links">
-      <a href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/mahdimashayekhi/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.kaggle.com/mahdimashayekhi" target="_blank" rel="noopener">Kaggle</a>
-      <a href="tel:+989376861693">0937 686 1693</a>
+    <p>I'm open to junior computer vision roles, internships and collaborations. Send me a message or grab my resume.</p>
+    <div class="cta">
+      <a class="btn fill" href="mailto:mahdimashayekhi.a@gmail.com"><svg class="i"><use href="#i-mail"/></svg>Email me</a>
+      <a class="btn line" href="assets/Mahdi-Mashayekhi-Resume.pdf" download><svg class="i"><use href="#i-down"/></svg>Download resume</a>
     </div>
   </div>
 </section>
 </main>
 
-<footer>Mahdi Mashayekhi · Tehran, Iran</footer>
+<footer>
+  <div class="wrap">
+    <p class="tagline">Built with curiosity, coffee and a lot of <span>bounding boxes</span>.</p>
+    <div class="socials">
+      <a href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#i-github"/></svg></a>
+      <a href="https://www.linkedin.com/in/mahdimashayekhi/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin"/></svg></a>
+      <a href="https://www.kaggle.com/mahdimashayekhi" target="_blank" rel="noopener" aria-label="Kaggle"><svg class="i"><use href="#i-kaggle"/></svg></a>
+      <a href="mailto:mahdimashayekhi.a@gmail.com" aria-label="Email"><svg class="i"><use href="#i-mail"/></svg></a>
+    </div>
+    <small>© 2026 Mahdi Mashayekhi · Tehran, Iran · <a class="top" href="#top">Back to top</a></small>
+  </div>
+</footer>
 
 <script>
-// Hero scene: simulated detection + speed estimation on a highway
 (function(){
   var c=document.getElementById('scene'),x=c.getContext('2d'),W,H,cars=[],lanes=4;
   var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function size(){var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);}
   function laneY(i){return H*(0.18+0.18*i)+H*0.06;}
-  function spawn(first){
-    var l=Math.floor(Math.random()*lanes),dir=l<2?1:-1,s=(0.7+Math.random()*1.4)*dir,w=52+Math.random()*34;
-    cars.push({l:l,s:s,w:w,h:w*.42,x:first?Math.random()*W:(dir>0?-w-20:W+20),conf:(0.9+Math.random()*0.09).toFixed(2),t:Math.random()<.2?'truck':'car'});
-  }
-  function corner(px,py,w,h,k){x.beginPath();
-    [[px,py,1,1],[px+w,py,-1,1],[px,py+h,1,-1],[px+w,py+h,-1,-1]].forEach(function(p){
-      x.moveTo(p[0],p[1]+p[3]*k);x.lineTo(p[0],p[1]);x.lineTo(p[0]+p[2]*k,p[1]);});x.stroke();}
-  function draw(){
-    x.clearRect(0,0,W,H);
+  function spawn(first){var l=Math.floor(Math.random()*lanes),dir=l<2?1:-1,s=(0.7+Math.random()*1.4)*dir,w=52+Math.random()*34;
+    cars.push({l:l,s:s,w:w,h:w*.42,x:first?Math.random()*W:(dir>0?-w-20:W+20),conf:(0.9+Math.random()*0.09).toFixed(2),t:Math.random()<.2?'truck':'car'});}
+  function corner(px,py,w,h,k){x.beginPath();[[px,py,1,1],[px+w,py,-1,1],[px,py+h,1,-1],[px+w,py+h,-1,-1]].forEach(function(p){x.moveTo(p[0],p[1]+p[3]*k);x.lineTo(p[0],p[1]);x.lineTo(p[0]+p[2]*k,p[1]);});x.stroke();}
+  function draw(){x.clearRect(0,0,W,H);
     x.strokeStyle='rgba(255,255,255,.06)';x.lineWidth=1;x.setLineDash([14,16]);
     for(var i=1;i<lanes;i++){var y=laneY(i)-H*0.09;x.beginPath();x.moveTo(0,y);x.lineTo(W,y);x.stroke();}
     x.setLineDash([]);
-    cars.forEach(function(a){
-      if(!still)a.x+=a.s;
-      var y=laneY(a.l)-a.h/2;
+    cars.forEach(function(a){if(!still)a.x+=a.s;var y=laneY(a.l)-a.h/2;
       x.fillStyle='#1c3345';x.fillRect(a.x,y,a.w,a.h);
       x.fillStyle='rgba(25,211,162,.25)';x.fillRect(a.x+a.w*.25,y+a.h*.15,a.w*.5,a.h*.3);
       var p=6;x.strokeStyle='#19d3a2';x.lineWidth=2;corner(a.x-p,y-p,a.w+2*p,a.h+2*p,10);
-      var kmh=Math.round(Math.abs(a.s)*58),label=a.t+' '+a.conf+'  '+kmh+' km/h';
+      var label=a.t+' '+a.conf+'  '+Math.round(Math.abs(a.s)*58)+' km/h';
       x.font='600 11px Sora, sans-serif';var tw=x.measureText(label).width+12;
-      x.fillStyle='#19d3a2';x.fillRect(a.x-p,y-p-18,tw,18);
-      x.fillStyle='#06231b';x.fillText(label,a.x-p+6,y-p-5);
-    });
+      x.fillStyle='#19d3a2';x.fillRect(a.x-p,y-p-18,tw,18);x.fillStyle='#06231b';x.fillText(label,a.x-p+6,y-p-5);});
     cars=cars.filter(function(a){return a.x>-200&&a.x<W+200;});
     if(!still&&cars.length<9&&Math.random()<.02)spawn(false);
-    if(!still)requestAnimationFrame(draw);
-  }
+    if(!still)requestAnimationFrame(draw);}
   size();for(var i=0;i<7;i++)spawn(true);draw();
   window.addEventListener('resize',function(){size();if(still)draw();});
 })();
