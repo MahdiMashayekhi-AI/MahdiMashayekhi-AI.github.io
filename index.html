@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahdi Mashayekhi | Computer Vision Engineer</title>
+<meta name="description" content="Portfolio of Mahdi Mashayekhi, a junior computer vision engineer working on object detection, real-time image processing and deep learning.">
+<meta property="og:title" content="Mahdi Mashayekhi | Computer Vision Engineer">
+<meta property="og:description" content="Object detection, real-time image processing and deep learning projects.">
+<meta name="theme-color" content="#0b1620">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1620; --bg2:#101f2c; --card:#12222f; --line:#223647;
+  --text:#c9d6df; --muted:#8aa0b0; --white:#f3f8fb;
+  --box:#19d3a2; --box-d:#0a8f6c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:Sora,"Source Sans 3",system-ui,sans-serif;color:var(--white);line-height:1.2}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--box);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(11,22,32,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font:700 18px Sora,sans-serif;color:var(--white);text-decoration:none;letter-spacing:.02em}
+.logo span{color:var(--box)}
+nav ul{display:flex;gap:22px;list-style:none;font-size:15px}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--white)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#scene{position:absolute;inset:0;width:100%;height:100%;opacity:.95}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 8%,rgba(11,22,32,.55) 60%,rgba(11,22,32,.2));}
+.hero .wrap{position:relative;z-index:2;padding-top:110px;padding-bottom:120px}
+.hello{color:var(--box);font-weight:600;margin-bottom:14px}
+.hero h1{font-size:clamp(38px,7vw,68px);font-weight:700;letter-spacing:-.02em}
+.hero h2{font-size:clamp(18px,2.6vw,24px);font-weight:600;color:var(--box);margin:16px 0 18px}
+.hero p.lead{max-width:52ch;font-size:19px;color:var(--text)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:12px 22px;font:600 15px Sora,sans-serif;text-decoration:none;border:2px solid var(--box);transition:background .2s,color .2s}
+.btn.fill{background:var(--box);color:#06231b}
+.btn.fill:hover{background:#4be8c0}
+.btn.line{color:var(--white)}
+.btn.line:hover{background:rgba(25,211,162,.14)}
+
+/* sections */
+section{padding:84px 0}
+section.alt{background:var(--bg2);border-block:1px solid var(--line)}
+.title{display:flex;align-items:center;gap:16px;margin-bottom:38px}
+.title h2{font-size:30px}
+.title::before{content:"";width:14px;height:34px;border-left:4px solid var(--box);border-top:4px solid var(--box)}
+.title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start}
+.about p + p{margin-top:16px}
+.facts{display:grid;gap:14px}
+.fact{border:1px solid var(--line);background:var(--card);padding:16px 18px;border-left:4px solid var(--box)}
+.fact b{display:block;font:700 26px Sora,sans-serif;color:var(--white)}
+.fact span{font-size:15px;color:var(--muted)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.skill{background:var(--card);border:1px solid var(--line);padding:22px}
+.skill h3{font-size:16px;margin-bottom:14px;color:var(--box)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:14px;padding:5px 10px;border:1px solid var(--line);color:var(--white);background:rgba(255,255,255,.03)}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.proj{position:relative;background:var(--card);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.proj:hover{border-color:var(--box);transform:translateY(-3px)}
+.proj::before{content:"";position:absolute;top:-1px;left:-1px;width:26px;height:26px;border-top:3px solid var(--box);border-left:3px solid var(--box)}
+.proj h3{font-size:21px;margin-bottom:12px}
+.proj p{color:var(--text);flex:1}
+.proj .tags{margin:18px 0 20px}
+.proj a.go{font:600 15px Sora,sans-serif;color:var(--box);text-decoration:none}
+.proj a.go:hover{text-decoration:underline}
+.proj .soon{font-size:14px;color:var(--muted)}
+
+/* timeline */
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.step{position:relative;padding:0 0 34px 30px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-9px;top:6px;width:16px;height:16px;background:var(--bg2);border:3px solid var(--box)}
+.step .when{font-size:14px;color:var(--box);font-weight:600}
+.step h3{font-size:19px;margin:4px 0}
+.step .org{color:var(--muted);font-size:15px;margin-bottom:8px}
+.step ul{margin-left:18px;display:grid;gap:5px}
+.step li::marker{color:var(--box)}
+
+/* award */
+.award{display:flex;gap:28px;align-items:center;border:2px solid var(--box);padding:28px 32px;background:var(--card)}
+.award .n{font:700 64px/1 Sora,sans-serif;color:var(--box);white-space:nowrap}
+.award .n small{display:block;font:600 12px Sora,sans-serif;color:var(--muted);margin-bottom:8px}
+.award h3{font-size:20px;margin-bottom:6px}
+.award p{color:var(--muted);font-size:15px}
+
+/* contact */
+.contact{text-align:center}
+.contact h2{font-size:clamp(28px,5vw,42px);margin-bottom:14px}
+.contact p{max-width:52ch;margin:0 auto 30px}
+.links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
+.links a{font-size:15px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.links a:hover{color:var(--box);border-color:var(--box)}
+footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  nav ul{gap:14px;font-size:14px}
+  nav ul li:nth-child(n+5){display:none}
+  .about{grid-template-columns:1fr;gap:30px}
+  .award{flex-direction:column;align-items:flex-start;gap:14px}
+  .hero::after{background:linear-gradient(180deg,rgba(11,22,32,.4),var(--bg) 85%)}
+  .hero .wrap{padding-top:80px;padding-bottom:90px}
+  section{padding:64px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.proj{transition:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">M<span>|</span>M</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="hello">Hi, I'm</p>
+    <h1>Mahdi Mashayekhi</h1>
+    <h2>Junior Computer Vision Engineer</h2>
+    <p class="lead">I teach machines to see. I build object detection and real-time image processing systems, from annotating the data to training the models that read plates and measure vehicle speed.</p>
+    <div class="cta">
+      <a class="btn fill" href="#projects">View my projects</a>
+      <a class="btn line" href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn line" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap">
+    <div class="title"><h2>About me</h2></div>
+    <div class="about">
+      <div>
+        <p>I'm a Computer Engineering student in Tehran who got hooked on computer vision. I like problems where a camera feed turns into useful information: a license plate read correctly, a vehicle tracked across a highway, a model that still works when the lighting changes.</p>
+        <p>My work covers the full pipeline: collecting and annotating data, choosing and training deep learning models, and making them run fast enough for real-time use. I rely on transfer learning to get strong results from small datasets, and I enjoy working in a team where ideas get tested quickly.</p>
+        <p>I'm currently working remotely in computer vision and looking for opportunities to grow as an engineer on real products.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>Rank 68</b><span>Nationwide, Associate Degree Entrance Exam (Computer major), 2024</span></div>
+        <div class="fact"><b>B2 English</b><span>Comfortable working in international, remote teams</span></div>
+        <div class="fact"><b>Remote</b><span>Computer vision work since August 2025</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="skills">
+  <div class="wrap">
+    <div class="title"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Computer vision</h3>
+        <div class="tags"><span>Object detection</span><span>Real-time image processing</span><span>Image processing techniques</span><span>Computer vision libraries</span></div></div>
+      <div class="skill"><h3>Deep learning</h3>
+        <div class="tags"><span>CNNs</span><span>RNNs</span><span>Transfer learning</span><span>Deep learning algorithms</span></div></div>
+      <div class="skill"><h3>Data</h3>
+        <div class="tags"><span>Data annotation tools</span><span>Dataset preparation</span></div></div>
+      <div class="skill"><h3>How I work</h3>
+        <div class="tags"><span>Teamwork and collaboration</span><span>Problem-solving</span><span>Positive attitude</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="title"><h2>Projects</h2></div>
+    <div class="projects">
+      <article class="proj">
+        <h3>Automatic Number Plate Recognition</h3>
+        <p>A system that finds vehicles and license plates in images and video, then reads the plate text. It shows how detection and text recognition work together in a real-time pipeline.</p>
+        <div class="tags"><span>Object detection</span><span>OCR</span><span>Real-time</span></div>
+        <a class="go" href="https://github.com/MahdiMashayekhi-AI/Automatic-Number-Plate-Recognition" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="proj">
+        <h3>Highway Vehicle Speed Estimation</h3>
+        <p>Detects and tracks vehicles on a highway and estimates how fast each one is moving, turning plain video into traffic measurements.</p>
+        <div class="tags"><span>Object detection</span><span>Tracking</span><span>Video analysis</span></div>
+        <a class="go" href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener">More on GitHub</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="journey">
+  <div class="wrap">
+    <div class="title"><h2>Journey</h2></div>
+    <div class="tl">
+      <div class="step"><span class="when">08/2025 to now</span><h3>Computer Vision Technology</h3><p class="org">Remote</p>
+        <ul><li>Work on object detection and real-time image processing tasks.</li><li>Annotate image data and train deep learning models, including CNNs and transfer learning.</li><li>Collaborate with teammates to solve practical problems in the vision pipeline.</li></ul></div>
+      <div class="step"><span class="when">Expected 09/2028</span><h3>Associate's Degree, Computer Engineering</h3><p class="org">Shamsipour Technical and Vocational College, Tehran</p></div>
+      <div class="step"><span class="when">Aug 2024</span><h3>National rank 68, Associate Degree Entrance Exam</h3><p class="org">Iranian Technical and Vocational University (TVU) | Sanjesh Organization</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <h2>Let's build something that sees</h2>
+    <p>I'm open to junior computer vision roles, internships and collaborations. Send me a message and I'll get back to you.</p>
+    <a class="btn fill" href="mailto:mahdimashayekhi.a@gmail.com">mahdimashayekhi.a@gmail.com</a>
+    <div class="links">
+      <a href="https://github.com/MahdiMashayekhi-AI" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mahdimashayekhi/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.kaggle.com/mahdimashayekhi" target="_blank" rel="noopener">Kaggle</a>
+      <a href="tel:+989376861693">0937 686 1693</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Mahdi Mashayekhi · Tehran, Iran</footer>
+
+<script>
+// Hero scene: simulated detection + speed estimation on a highway
+(function(){
+  var c=document.getElementById('scene'),x=c.getContext('2d'),W,H,cars=[],lanes=4;
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);}
+  function laneY(i){return H*(0.18+0.18*i)+H*0.06;}
+  function spawn(first){
+    var l=Math.floor(Math.random()*lanes),dir=l<2?1:-1,s=(0.7+Math.random()*1.4)*dir,w=52+Math.random()*34;
+    cars.push({l:l,s:s,w:w,h:w*.42,x:first?Math.random()*W:(dir>0?-w-20:W+20),conf:(0.9+Math.random()*0.09).toFixed(2),t:Math.random()<.2?'truck':'car'});
+  }
+  function corner(px,py,w,h,k){x.beginPath();
+    [[px,py,1,1],[px+w,py,-1,1],[px,py+h,1,-1],[px+w,py+h,-1,-1]].forEach(function(p){
+      x.moveTo(p[0],p[1]+p[3]*k);x.lineTo(p[0],p[1]);x.lineTo(p[0]+p[2]*k,p[1]);});x.stroke();}
+  function draw(){
+    x.clearRect(0,0,W,H);
+    x.strokeStyle='rgba(255,255,255,.06)';x.lineWidth=1;x.setLineDash([14,16]);
+    for(var i=1;i<lanes;i++){var y=laneY(i)-H*0.09;x.beginPath();x.moveTo(0,y);x.lineTo(W,y);x.stroke();}
+    x.setLineDash([]);
+    cars.forEach(function(a){
+      if(!still)a.x+=a.s;
+      var y=laneY(a.l)-a.h/2;
+      x.fillStyle='#1c3345';x.fillRect(a.x,y,a.w,a.h);
+      x.fillStyle='rgba(25,211,162,.25)';x.fillRect(a.x+a.w*.25,y+a.h*.15,a.w*.5,a.h*.3);
+      var p=6;x.strokeStyle='#19d3a2';x.lineWidth=2;corner(a.x-p,y-p,a.w+2*p,a.h+2*p,10);
+      var kmh=Math.round(Math.abs(a.s)*58),label=a.t+' '+a.conf+'  '+kmh+' km/h';
+      x.font='600 11px Sora, sans-serif';var tw=x.measureText(label).width+12;
+      x.fillStyle='#19d3a2';x.fillRect(a.x-p,y-p-18,tw,18);
+      x.fillStyle='#06231b';x.fillText(label,a.x-p+6,y-p-5);
+    });
+    cars=cars.filter(function(a){return a.x>-200&&a.x<W+200;});
+    if(!still&&cars.length<9&&Math.random()<.02)spawn(false);
+    if(!still)requestAnimationFrame(draw);
+  }
+  size();for(var i=0;i<7;i++)spawn(true);draw();
+  window.addEventListener('resize',function(){size();if(still)draw();});
+})();
+</script>
+</body>
+</html>
